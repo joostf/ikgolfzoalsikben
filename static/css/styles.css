@@ -1,0 +1,112 @@
+:root {
+    --c-primary:#f0ead2;
+    --c-secondary:#6c584c;
+    --c-tertiary: #43291f;
+    --c-highlight:#adc178;
+
+    --space: 1em
+}
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font: 1.25em / 1.5  Helvetica, Arial, sans-serif    ;
+    margin: 0;
+    padding: 0;
+    background-color: var(--c-primary);
+    color: var(--c-secondary);
+}
+body > * {
+    padding:var(--space);
+    max-width:60rem;
+    margin:0 auto;
+}
+h1 {
+    margin:0;
+    font-size: 5rem;
+}
+h2 {
+    font-size: 3rem;
+}
+h1, h2 {
+    font-weight: normal;
+    color:var(--c-highlight);
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    color: var(--c-tertiary);
+    transition: .25s;
+}
+a:hover, a:focus {
+    color: var(--c-dimmed);
+}
+ul {
+    list-style:none;
+    padding:0;
+}
+li {
+    position:relative;
+    padding-left: calc(var(--space) * 2);
+    padding-bottom: calc(var(--space)) ;
+}
+li > svg {
+    position:absolute;
+    left:0;
+    top: -.5rem;
+}
+img {
+    max-width: 100%;
+}
+em {
+    background-color: var(--c-secondary);
+    font-style: normal;
+    padding:calc(var(--space) / 8);
+    white-space: nowrap;
+    color:var(--c-primary);
+    border-radius:.15rem;
+}
+blockquote {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    padding:3rem;
+    background-color: var(--c-tertiary);
+    color:var(--c-primary)
+}
+cite {
+    display:block;
+    font-size: 1rem;
+}
+header p {
+    font-style: italic;
+    margin: 0;
+}
+nav ul {
+    display:flex;
+    margin: calc(var(--space) * 2) calc(var(--space) * -1) 0;
+    background-color: var(--c-highlight);
+    padding:0  calc(var(--space) / 2);
+    overflow-x:scroll;
+}
+nav ul li {
+    margin-right: calc(var(--space) * 2);
+    padding:0;
+}
+nav a {
+    display:block;
+    text-decoration: none;
+    display:flex;
+    align-items: flex-end;
+    padding:var(--space) calc(var(--space) / 2);
+    white-space: nowrap;
+}
+nav a:hover {
+    background-color: var(--c-tertiary);
+    color: var(--c-primary);
+}
+nav a span {
+    line-height:1
+}
