@@ -80,19 +80,31 @@ cite {
     display:block;
     font-size: 1rem;
 }
+header {
+    display:flex;
+    flex-wrap:wrap;
+    align-items: flex-end;
+}
+header img {
+    width:20rem;
+    margin-left: var(--space);
+}
 header p {
     font-style: italic;
     margin: 0;
+}
+nav {
+    width:100%
 }
 nav ul {
     display:flex;
     margin: calc(var(--space) * 2) calc(var(--space) * -1) 0;
     background-color: var(--c-highlight);
-    padding:0  calc(var(--space) / 2);
+    padding:0 ;
     overflow-x:scroll;
+    width:calc(100% + calc(var(--space) * 2))
 }
 nav ul li {
-    margin-right: calc(var(--space) * 2);
     padding:0;
 }
 nav a {
@@ -100,7 +112,7 @@ nav a {
     text-decoration: none;
     display:flex;
     align-items: flex-end;
-    padding:var(--space) calc(var(--space) / 2);
+    padding:var(--space) calc(var(--space));
     white-space: nowrap;
 }
 nav a:hover {
@@ -125,6 +137,10 @@ main > a:hover {
     background-color: var(--c-tertiary);
     color:var(--c-primary);
 }
+
+footer {
+    padding-bottom: 5rem;
+}
 @media (min-width:50rem) {
     h1 {
         font-size: 5rem;
@@ -136,3 +152,13 @@ main > a:hover {
         font-size: 2rem;
     }
 }
+
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
