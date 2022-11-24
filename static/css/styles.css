@@ -26,10 +26,10 @@ body > * {
 }
 h1 {
     margin:0;
-    font-size: 5rem;
+    font-size: 2rem;
 }
 h2 {
-    font-size: 3rem;
+    font-size: 1.5rem;
 }
 h1, h2 {
     font-weight: normal;
@@ -62,19 +62,19 @@ img {
     max-width: 100%;
 }
 em {
-    background-color: var(--c-secondary);
     font-style: normal;
+    font-weight:bold;
     padding:calc(var(--space) / 8);
     white-space: nowrap;
-    color:var(--c-primary);
     border-radius:.15rem;
 }
 blockquote {
     font-family: 'Montserrat', sans-serif;
-    font-size: 2rem;
-    padding:3rem;
+    font-size: 1.5rem;
+    padding:var(--space);
     background-color: var(--c-tertiary);
-    color:var(--c-primary)
+    color:var(--c-primary);
+    margin:0;
 }
 cite {
     display:block;
@@ -109,4 +109,16 @@ nav a:hover {
 }
 nav a span {
     line-height:1
+}
+
+@media (min-width:50rem) {
+    h1 {
+        font-size: 5rem;
+    }
+    h2 {
+        font-size: 3rem;
+    }
+    blockquote {
+        font-size: 2rem;
+    }
 }
