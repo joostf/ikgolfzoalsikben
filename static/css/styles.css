@@ -6,14 +6,12 @@
 
     --space: 1em
 }
-
 * {
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
-
 body {
-    font: 1.25em / 1.5  Helvetica, Arial, sans-serif    ;
+    font: 1em / 1.5  Helvetica, Arial, sans-serif    ;
     margin: 0;
     padding: 0;
     background-color: var(--c-primary);
@@ -87,7 +85,7 @@ header {
 }
 header img {
     width:20rem;
-    margin-left: var(--space);
+    margin-left: calc(var(--space) / 2);
 }
 header p {
     font-style: italic;
@@ -102,10 +100,12 @@ nav ul {
     background-color: var(--c-highlight);
     padding:0 ;
     overflow-x:scroll;
-    width:calc(100% + calc(var(--space) * 2))
+    width:calc(100% + calc(var(--space) * 2));
+    scroll-snap-type: x mandatory;
 }
 nav ul li {
     padding:0;
+    scroll-snap-align: center;
 }
 nav a {
     display:block;
@@ -139,11 +139,26 @@ main > a:hover {
     background-color: var(--c-tertiary);
     color:var(--c-primary);
 }
+section {
+    margin:0
+}
 
 footer {
     padding-bottom: 5rem;
 }
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
 @media (min-width:50rem) {
+    body {
+        font-size: 1.25em;
+    }
     h1 {
         font-size: 5rem;
     }
@@ -155,12 +170,3 @@ footer {
     }
 }
 
-.visually-hidden {
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-  }
